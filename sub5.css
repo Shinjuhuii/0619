@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GmarketSans';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500; /* Medium weight */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GmarketSans';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+  }
+  
+    
+    
+  @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'GmarketSans', sans-serif;
+    font-weight: 500;
+    background-image: url(https://i.postimg.cc/tgSWNpfc/smooth-white-plaster-wall.jpg);
+    background-size: cover; /* 비율을 유지하며 배경을 채움 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 안함 */
+    background-position: center; /* 배경 이미지 중앙 정렬 */
+    background-attachment: fixed; /* 배경 이미지 고정 */
+}
+
+
+
+  /* 헤더 */
+header {
+    width: 1400px;
+    height: 102px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+  }
+  
+  .nav li {
+    list-style: none;
+  }
+  
+  .nav li a {
+    font-family: "Pretendard Variable";
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .login {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Pretendard Variable";
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    border: #000000 solid 1px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+
+  .pin{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .pin p {
+    font-size: 32px;
+    margin-left: 5px;
+  }
+
+  .pin svg{
+    margin-top: 33px;
+  }
+
+  .introduction{
+    text-align: center;
+  }
+
+  .introduction h1{
+    font-weight: 500;
+    font-size: 50px;
+    margin-top: -20px;
+  }
+
+  .introduction img{
+    margin-top: 20px;
+  }
+
+  .introduction h2{
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .introduction p{
+    font-size: 18px;
+  }
+
+  .place{
+    display: flex;
+    flex-direction: column; /* 자식 요소를 세로로 정렬하기 위해 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    height: 100vh; /* 뷰포트 높이를 기준으로 세로 가운데 정렬 */
+    margin-top: 250px;
+  }
+
+  .place h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 45px;
+  }
+
+  .first-box {
+    width: 600px;
+    height: 275px;
+    background-color: #fff; /* 배경색을 하얀색으로 지정 */
+    border-radius: 20px; /* 모서리를 둥글게 만듦 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    /* 기타 스타일링 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 50px;
+}
+
+.first-box img{
+  width: 45%;
+}
+
+.place-text{
+  margin-left: 35px;
+}
+
+.place-text h1{
+  font-size: 40px;
+  font-family: 'Pretendard-Regular';
+  font-weight: 600;
+}
+
+.place-text p{
+  font-family: 'Pretendard-Regular';
+  font-size: 18px;
+  margin-top: -20px;
+
+}
+
+.second-box {
+  width: 600px;
+  height: 275px;
+  background-color: #fff; /* 배경색을 하얀색으로 지정 */
+  border-radius: 20px; /* 모서리를 둥글게 만듦 */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  /* 기타 스타일링 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  margin-top: 50px;
+}
+
+.second-box img{
+width: 45%;
+}
+
+.place-text{
+margin-left: 35px;
+}
+
+.place-text h1{
+font-size: 40px;
+font-family: 'Pretendard-Regular';
+font-weight: 600;
+}
+
+.place-text p{
+font-family: 'Pretendard-Regular';
+font-size: 18px;
+margin-top: -20px;
+}
+
+.description {
+  margin: 300px auto 0;
+  width: 800px;
+}
+
+.description h1{
+  font-size: 40px;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+.description2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 상하 중앙 정렬 */
+  font-size: 20px;
+}
+
+.description2 .left,
+.description2 .right {
+  width: calc(50% - 42.5px); /* 각각의 div를 전체 폭의 반에서 42.5px을 뺀 만큼의 너비로 설정 */
+}
+
+.description2 .left {
+  margin-right: 42.5px; /* 왼쪽 div의 오른쪽 여백 설정 */
+}
+
+.description2 .right {
+  margin-left: 42.5px; /* 오른쪽 div의 왼쪽 여백 설정 */
+}
+
+.location {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-top: 50px; /* 원하는 만큼의 위 여백 설정 */
+  margin-bottom: 200px;
+}
+
+.location iframe {
+  width: 900px;
+  height: 480px;
+  border: 0;
+  border-radius: 20px; /* 둥글기 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 선택적으로 그림자 효과 추가 */
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+/* 초기 상태 설정 */
+.main, .place, .description {
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.first-box, .second-box {
+  opacity: 0;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.first-box {
+  animation-name: slideInFromLeft;
+}
+
+.second-box {
+  animation-name: slideInFromRight;
+}
+
+/* 초기 상태 설정 */
+.main, .place, .description {
+  opacity: 0;
+}
+
+/* 푸터 */
+.table-container {
+  width: 100%;
+  background-color: #000000; /* 검은색 배경 */
+  color: #ffffff; /* 흰색 폰트 색상 */
+  height: 300px; /* 높이 290px */
+}
+
+
+table {
+  width: 83%;
+  border-collapse: collapse;
+  margin-left: 140px; /* 표 바로 아래 여백 30px */
+  padding-top: 90px;
+}
+
+table, th, td {
+  /*border: 1px solid #ffffff; /* 테이블 테두리 색상 */
+}
+
+th, td {
+  font-family: 'GmarketSans';
+}
+
+th {
+  background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+}
+/* 첫 번째 이미지 왼쪽 정렬 */
+.table-container td:nth-child(1) img {
+display: block;
+margin-left: 0;
+margin-right: auto;
+margin-bottom: 15px;
+}
+
+/* 두 번째 이미지 오른쪽 정렬 */
+.table-container td:nth-child(2) img {
+display: block;
+margin-left: auto;
+margin-right: 0;
+margin-bottom: 15px;
+}
+
+
+/* 가로 선 스타일링 */
+/* 가로 선 스타일링 */
+hr {
+border: 0;
+border-top: 1px solid #ffffff; /* 가로 선 색상 및 두께 */
+width: 100%;
+margin: 60px 0 12px; /* 위쪽 여백 20px, 아래쪽 여백 30px */
+padding: 0;
+}
+
+
+/* 연락처 정보 스타일링 */
+.contact-info {
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  text-align: right; /* 오른쪽 정렬 */
+  font-size: 16px;
+  color: #848484;
+}
+.paragraph{
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  color: #848484;
+  font-size: 12pt;
+}
+.additional-text {
+  font-family: 'GmarketSans'; /* 원하는 폰트 설정 */
+  font-size: 16px; /* 폰트 크기 */
+  color: #848484; /* 글자 색상 */
+  display: block;
+  margin-left: auto;
+}
+    

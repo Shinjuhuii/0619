@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: 300, 500, 700; /* Light weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100, 200, 300, 400, 500, 600;
+  font-style: normal;
+}
+  
+  
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* 헤더 */
+header {
+  width: 1400px;
+  height: 102px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav li a {
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.login {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  border: #fff solid 1px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+
+  .main{
+    background-color: #F89645;
+    width: 100%;
+    height: 850px;
+    margin: -150px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    display: flex;
+    color: white;
+    position: relative;
+    overflow: hidden; /* 부모 요소에 overflow 설정 */
+}
+
+.main-title {
+    display: flex;
+    color: white;
+    position: relative;
+    overflow: hidden; /* 부모 요소에 overflow 설정 */
+}
+
+.animated-image {
+    width: 94vh;
+    margin-left: 200px;
+    margin-top: 32px;
+    position: relative;
+    right: -70%; /* 화면 오른쪽 밖에서 시작 */
+    opacity: 0; /* 처음에 투명도 0 */
+    animation: slideInFromRight 2.7s forwards; /* 2초 동안 슬라이드 인 애니메이션 실행 */
+}
+
+@keyframes slideInFromRight {
+    to {
+        right: 0; /* 최종 위치 */
+        opacity: 1; /* 최종 투명도 */
+    }
+}
+
+.main-title h1{
+    margin-top: 190px;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+.main-title p{
+    font-size: 20px;
+    margin-top: -20px;
+    font-weight: 500;
+}
+.scroll {
+    position: relative;
+    margin-top: -150px;
+}
+
+.scroll a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-top: 80px;
+}
+
+.scroll a span {
+    position: absolute;
+    margin-top: 40px;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+
+.scroll a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+
+.scroll a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+
+.scroll a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+
+  @-webkit-keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review {
+  display: none; /* 처음에는 review 부분을 숨깁니다 */
+}
+
+.review.active {
+  display: flex; /* active 클래스가 추가되면 flex로 보이게 합니다 */
+}
+
+.effect{
+    margin-top: 150px;
+    width: 15vh;
+    margin-right: 230px;
+    margin-bottom: -30px;
+
+    animation: slideFromLeft 1.5s ease forwards;
+}
+
+.effect1 {
+    margin-bottom: -90px;
+    margin-left: 380px;
+
+    animation: slideFromRight 1.5s ease forwards;
+}
+
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.review p{
+    font-size: 24px;
+    font-weight: 300;
+    font-weight: 300;
+}
+
+.review h2{
+    margin-top: -10px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.btn {
+  margin-bottom: 170px;
+}
+
+.review-share {
+    width: 100%;
+    height: 820px; /* 높이 설정 */
+    background-color: #262626; /* 배경 색상 설정 */
+    color: #fff; /* 텍스트 색상을 밝게 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    text-align: center;
+}
+
+.review-share p{
+    margin-top: 100px;
+    font-size: 24px;
+}
+
+.review-share h2{
+    margin-top: -20px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.share-box p{
+    font-size: 16px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.bubble-container {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bubble{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    position: absolute;
+    animation: moveBubbles 20s linear infinite;
+}
+
+.bubble img{
+    width: 23%;
+    max-width: 100%; /* 이미지 크기 조정 */
+    height: auto; /* 이미지 비율 유지 */
+}
+
+img[src="https://i.postimg.cc/NFv17fFY/Group-1321316403.png"] {
+    margin-bottom: 150px;
+}
+
+img[src="https://i.postimg.cc/7PS1P7tL/Group-1321316454.png"] {
+    margin-bottom: 150px;
+}
+
+@keyframes moveBubbles {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* 푸터 */
+.table-container {
+  width: 100%;
+  background-color: #000000; /* 검은색 배경 */
+  color: #ffffff; /* 흰색 폰트 색상 */
+  height: 300px; /* 높이 290px */
+}
+
+
+table {
+  width: 83%;
+  border-collapse: collapse;
+  margin-left: 140px; /* 표 바로 아래 여백 30px */
+  padding-top: 90px;
+}
+
+table, th, td {
+  /*border: 1px solid #ffffff; /* 테이블 테두리 색상 */
+}
+
+th, td {
+  font-family: 'GmarketSans';
+}
+
+th {
+  background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+}
+/* 첫 번째 이미지 왼쪽 정렬 */
+.table-container td:nth-child(1) img {
+display: block;
+margin-left: 0;
+margin-right: auto;
+margin-bottom: 15px;
+}
+
+/* 두 번째 이미지 오른쪽 정렬 */
+.table-container td:nth-child(2) img {
+display: block;
+margin-left: auto;
+margin-right: 0;
+margin-bottom: 15px;
+}
+
+
+/* 가로 선 스타일링 */
+/* 가로 선 스타일링 */
+hr {
+border: 0;
+border-top: 1px solid #ffffff; /* 가로 선 색상 및 두께 */
+width: 100%;
+margin: 60px 0 12px; /* 위쪽 여백 20px, 아래쪽 여백 30px */
+padding: 0;
+}
+
+
+/* 연락처 정보 스타일링 */
+.contact-info {
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  text-align: right; /* 오른쪽 정렬 */
+  font-size: 16px;
+  color: #848484;
+}
+.paragraph{
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  color: #848484;
+  font-size: 12pt;
+}
+.additional-text {
+  font-family: 'GmarketSans'; /* 원하는 폰트 설정 */
+  font-size: 16px; /* 폰트 크기 */
+  color: #848484; /* 글자 색상 */
+  display: block;
+  margin-left: auto;
+}
+    

@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: 300, 500, 700; /* Light weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100, 200, 300, 400, 500, 600;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.box {
+  width: 100%;
+  height: 900px;
+}
+
+.box1 {
+  background-image: url('https://ifh.cc/g/Sza2sb.png');
+  background-size: cover; /* 배경 이미지가 요소 전체를 덮도록 설정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+  height: 826px; /* 요소의 높이 설정 */
+}
+.box44 {
+  height: 466px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box44 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box44 img {
+  
+  width: 34%;
+  max-width: 100%; /* 이미지가 박스 내에서 최대 너비를 유지하도록 설정 */
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 40%; /* 상위 요소의 50%에서부터 위치 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box44 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+.x{
+  height: auto; /* 비율 유지 */
+  display: block; /* 인라인 요소의 여백 제거 */
+  margin-left: 46%; /* 좌우 마진 설정 */
+}
+
+
+
+
+
+
+
+
+.box2 {
+  background-color: rgb(255, 255, 255);
+  height: 460px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box2 p span{
+  font-size: 50pt;
+  color: #ED7501;
+  font-family: 'GmarketSansmedium';
+}
+.box55 {
+  height: 466px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box55 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box55 img {
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box55 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+
+
+
+
+.jiji{
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+}
+
+.box3 img {
+  margin-left: 100px; /* 동일한 왼쪽 여백 */
+}
+
+.info3 span {
+  color: red; /* 원하는 색상으로 변경 */
+}
+
+
+.info1 {
+  font-size: 50pt;
+  color: #000000;
+  font-family: 'GmarketSansmedium';
+  text-align: center;
+  margin-top: 150px;
+  line-height: 1.2em;
+}
+.info2 {
+  font-size: 22pt;
+  color: #000000;
+  font-family: 'GmarketSansmedium';
+  text-align: center;
+  margin-top: 50px;
+  line-height: 1.3em;
+}
+.info3 {
+  font-size: 35pt;
+  color: #6E6E6E;
+  font-family: 'GmarketSansmedium';
+  padding-top: 80px;
+  padding-left: 190px;
+  line-height: 1.3em;
+}
+.info3 span {
+  color: #391FD8; /* 원하는 색상으로 변경 */
+}
+.info4 {
+  font-size: 15pt;
+  color: #232323;
+  font-family: 'GmarketSansmedium';
+  padding-top: 20px;
+  padding-left: 190px;
+  line-height: 1.3em;
+}
+
+
+.box3 {
+  background-color: #DCEAF7;
+  height: 940px;
+}
+
+
+
+
+.box4 {
+  background-color: rgb(255, 255, 255);
+  height: 466px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box4 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box4 img {
+  max-width: 100%; /* 이미지가 박스 내에서 최대 너비를 유지하도록 설정 */
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 40%; /* 상위 요소의 50%에서부터 위치 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box4 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+
+
+
+
+
+.box5 {
+  background-image: url('/img/백그랑ㄴ드.svg'); /* 배경 이미지 경로를 지정하세요 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 930px;
+}
+.conteudo{
+  display: flex;  
+  width: 350px;
+  scroll-snap-type: x mandatory;
+  column-gap: 20px;
+}
+.card{
+  flex: 0 0 100%;
+  padding: 30px;
+  scroll-snap-align: start;
+  border-radius: 30px;
+}
+
+.box6 {
+  background-color: rgb(255, 255, 255); /* 배경 색상 설정 */
+  height: 640px; /* 요소의 높이 설정 */
+  background-image: url('https://ifh.cc/g/846vkK.png'); /* 배경 이미지 설정 */
+  background-size: 40%; /* 배경 이미지의 너비를 요소의 50%, 높이를 100%로 설정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+  background-position: center bottom; /* 배경 이미지 중앙 정렬 및 하단 맞춤 */
+}
+
+
+/* 푸터 */
+.table-container {
+  width: 100%;
+  background-color: #000000; /* 검은색 배경 */
+  color: #ffffff; /* 흰색 폰트 색상 */
+  height: 300px; /* 높이 290px */
+}
+
+
+table {
+  width: 83%;
+  border-collapse: collapse;
+  margin-left: 140px; /* 표 바로 아래 여백 30px */
+  padding-top: 90px;
+}
+
+table, th, td {
+  /*border: 1px solid #ffffff; /* 테이블 테두리 색상 */
+}
+
+th, td {
+  font-family: 'GmarketSans';
+}
+
+th {
+  background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+}
+/* 첫 번째 이미지 왼쪽 정렬 */
+.table-container td:nth-child(1) img {
+display: block;
+margin-left: 0;
+margin-right: auto;
+margin-bottom: 15px;
+}
+
+/* 두 번째 이미지 오른쪽 정렬 */
+.table-container td:nth-child(2) img {
+display: block;
+margin-left: auto;
+margin-right: 0;
+margin-bottom: 15px;
+}
+
+
+/* 가로 선 스타일링 */
+/* 가로 선 스타일링 */
+hr {
+border: 0;
+border-top: 1px solid #ffffff; /* 가로 선 색상 및 두께 */
+width: 100%;
+margin: 60px 0 12px; /* 위쪽 여백 20px, 아래쪽 여백 30px */
+padding: 0;
+}
+
+
+/* 연락처 정보 스타일링 */
+.contact-info {
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  text-align: right; /* 오른쪽 정렬 */
+  font-size: 16px;
+  color: #848484;
+}
+.paragraph{
+  font-family: 'GmarketSans';
+  font-weight: 300; /* Light weight */
+  color: #848484;
+  font-size: 12pt;
+}
+.additional-text {
+  font-family: 'GmarketSans'; /* 원하는 폰트 설정 */
+  font-size: 16px; /* 폰트 크기 */
+  color: #848484; /* 글자 색상 */
+  display: block;
+  margin-left: auto;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+.cover {
+  width: 100vw;
+  display: flex;
+}
+.cover:nth-child(1) {
+  /* margin-top: 10vh; */
+  transform: rotate(0deg);
+  background-color: #ffffff;
+}
+
+.cover:nth-child(2) {
+  transform: rotate(0deg);
+  background-color: #391FD8;
+  justify-content: flex-end;
+}
+
+.first-parallel,
+.second-parallel {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* 헤더 */
+header {
+  width: 1400px;
+  height: 102px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav li a {
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  border: #000000 solid 1px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+
+/* 사진 */
+
+
+.title{
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 35pt;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 110px;
+}
+.title img{
+  width: 700px;
+}
+
+.title2{
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-size: 17pt;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.3;
+}
+.title3{
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-size: 14pt;
+  color: #c0c0c0;
+  padding-left: 150px;
+  padding-top: 30px;
+  padding-bottom: 2px;
+}
+.title4{
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-size: 25pt;
+  color: #ffffff;
+  padding-left: 150px;
+  padding-bottom: 5px;
+}
+.ttt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7; /* 이미지의 투명도 설정 */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 140px;
+
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 470px; /* 가로 크기 */
+  height: 400px; /* 세로 크기 */
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content img {
+  display: block;
+  width: 95%;
+  height: 98%; /* 이미지 높이를 줄여서 텍스트 공간 확보 */
+  object-fit: cover;
+}
+
+.slide-content p {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  margin: 0;
+  padding: 24px;
+  font-size: 27px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  color: #ffffff;
+  
+}
+
+
+
+
+
+
+
+
+.slider-container {
+  position: relative;
+  width: 100%; /* 화면 전체 너비 */
+  overflow: hidden; /* 넘치는 부분 숨기기 */
+}
+
+.slider {
+  display: flex; /* 이미지들을 가로로 배열 */
+  animation: slide 5s linear infinite; /* 애니메이션 설정 */
+  align-items: center;
+}
+
+.slide {
+  min-width: 100%; /* 각 슬라이드의 너비 */
+  height: 100%; /* 화면 전체 높이 */
+}
+
+.slide img {
+  margin-top: 100px;
+  width: 110%; /* 이미지 너비 100% */
+  height: 100%; /* 이미지 높이 100% */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+@keyframes slide {
+  0%, 100% {
+      transform: translateY(0); /* 초기 위치 */
+  }
+  50% {
+      transform: translateY(-10%); /* 위로 이동 */
+  }
+}
+
+
+
+.updo img{
+  width: 40%;
+  padding-top: 540px;
+}
+
+
+
+
+
+
+
+
+
+
+.box55 {
+  height: 466px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box55 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box55 img {
+  
+  width: 74%;
+  max-width: 100%; /* 이미지가 박스 내에서 최대 너비를 유지하도록 설정 */
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  top:30%; /* 상위 요소의 50%에서부터 위치 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box55 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
