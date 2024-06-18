@@ -160,7 +160,7 @@ body {
 }
 
 .box3 img {
-  margin-left: 100px; /* 동일한 왼쪽 여백 */
+  margin-right:160px; /* 동일한 왼쪽 여백 */
 }
 
 .info3 span {
