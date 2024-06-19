@@ -270,7 +270,8 @@ header {
     height: 820px; /* 높이 설정 */
     background-color: #262626; /* 배경 색상 설정 */
     color: #fff; /* 텍스트 색상을 밝게 설정 */
-    padding: 20px; /* 내부 여백 설정 */
+   padding-top: 20px;
+   padding-bottom: 20px;
     text-align: center;
 }
 
