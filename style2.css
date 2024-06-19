@@ -20,7 +20,6 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'GmarketSans';
-    color: var(--text-color);
     scroll-behavior: smooth;
 }
 
