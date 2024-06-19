@@ -52,7 +52,7 @@
   top: 0;
   left: 0;
   width: 130%; /* 너비는 화면 너비에 맞게 설정 */
-  height: 88%; /* 높이를 화면 높이의 150%로 설정하여 세로 길이를 늘립니다 */
+  height: 100%; /* 높이를 화면 높이의 150%로 설정하여 세로 길이를 늘립니다 */
   object-fit: cover; /* 비디오가 요소를 완전히 채우도록 설정 */
 }
 
@@ -106,8 +106,8 @@ header {
   font-family: "Pretendard Variable";
   font-weight: 600;
   font-size: 18px;
-  color: #ffffff;
-  border: #ffffff solid 1px;
+  color: #000000;
+  border: #000000 solid 1px;
   border-radius: 50px;
   text-decoration: none;
 }
