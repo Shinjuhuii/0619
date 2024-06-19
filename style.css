@@ -105,6 +105,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.box2 img{
+  width: 800px;
+}
 
 .box2 p span{
   font-size: 50pt;
@@ -261,7 +264,8 @@ body {
 
 
 .box5 {
-  background-image: url('/img/백그랑ㄴ드.svg'); /* 배경 이미지 경로를 지정하세요 */
+  width: 100%;
+  background-image: url('https://ifh.cc/g/T3tBR4.png'); /* 배경 이미지 경로를 지정하세요 */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -586,8 +590,8 @@ swiper-slide {
 
 
 .updo img{
-  width: 40%;
-  padding-top: 540px;
+  width: 38%;
+  padding-top: 640px;
 }
 
 
