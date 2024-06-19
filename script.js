@@ -177,6 +177,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageLeft = document.querySelector(".image-left");
+        const imageRight = document.querySelector(".image-right");
+
+        function checkScroll() {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const leftPosition = imageLeft.offsetTop;
+            const rightPosition = imageRight.offsetTop;
+
+            if (scrollPosition > leftPosition) {
+                imageLeft.classList.add("active");
+            }
+            if (scrollPosition > rightPosition) {
+                imageRight.classList.add("active");
+            }
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        checkScroll(); // Check on page load in case elements are already in view
+    });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -250,29 +270,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // wrap 04 스크롤이벤트
-
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.travel > div');
     const images = [
-        'url("images/picture_1.png")',
-        'url("images/picture_2.png")',
-        'url("images/picture_3.png")',
-        'url("images/picture_4.png")'
+        'url("https://ifh.cc/g/FTsF1o.png")',
+        'url("https://ifh.cc/g/o5fl9V.jpg")',
+        'url("https://ifh.cc/g/AQ2oLA.png")',
+        'url("https://ifh.cc/g/SRfJmz.jpg")',
+        'url("img/휴식.svg")'
     ];
 
-    function handleScroll() {
-        sections.forEach((section, index) => {
-            const rect = section.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+    let isChanging = false;
 
-            if (rect.top < windowHeight && rect.bottom > 0) {
-                section.style.backgroundImage = images[index];
-            } else {
-                section.style.backgroundImage = `url('images/picture_${index + 1}.png')`;
-            }
-        });
+    function handleScroll() {
+        if (!isChanging) {
+            isChanging = true;
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    section.style.transition = 'opacity 1.0s ease-in-out, filter 1.4s ease-in-out';
+                    section.style.backgroundImage = images[index];
+                    section.classList.add('active');
+                } else {
+                    section.style.transition = 'opacity 1.0s ease-in-out, filter 1.4s ease-in-out';
+                    section.classList.remove('active');
+                }
+            });
+
+            setTimeout(() => {
+                isChanging = false;
+            }, 100); // 애니메이션 시간 (opacity, filter)과 일치시켜야 함
+        }
     }
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // 초기 로드 시 호출
 });
+
+// wrap 05 스크롤이벤트
+const bubble = document.querySelector('.bubble');
+    let bubbleWidth = bubble.offsetWidth;
+    let currentPosition = 0;
+    const speed = 1; // 이동 속도
+    let isReset = false;
+
+    function moveImages() {
+        currentPosition -= speed;
+        bubble.style.transform = `translateX(${currentPosition}px)`;
+
+        if (currentPosition <= -bubbleWidth) {
+            // 1200px에 접근하면 초기화
+            if (!isReset && window.innerWidth <= 1200) {
+                isReset = true;
+                bubble.innerHTML = bubble.innerHTML.substr(0, bubble.innerHTML.indexOf('<img src="https://i.postimg.cc/Y9W6Wmpb/Group-1321316402.png" alt="">') + 55); // 마지막 이미지 삭제
+                bubbleWidth = bubble.offsetWidth;
+                currentPosition = 0;
+                isReset = false;
+            } else {
+                currentPosition = 0;
+            }
+        }
+
+        requestAnimationFrame(moveImages);
+    }
+
+    moveImages();
+
+    
+    
