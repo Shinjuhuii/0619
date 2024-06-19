@@ -66,8 +66,6 @@ const innerPin01 = document.querySelector('.inner-pin01');
 // 핀을 클릭할 때 실행할 함수
 function handlePinClick(event) {
     console.log('click');
- 
- 
     // 모든 핀의 활성화 클래스를 제거합니다.
     document.querySelectorAll('.inner-pin01, .inner-pin02, .inner-pin03, .inner-pin04, .inner-pin05, .inner-pin06').forEach(pin => {
         pin.classList.remove('active');
@@ -95,12 +93,12 @@ function handlePinClick(event) {
 }
 
 // haero와 toro를 트랜지션 효과와 함께 숨기는 함수
-// function hideHaeroAndToroWithTransition() {
-//     haero.style.transition = "opacity 1.4s ease-in-out";
-//     toro.style.transition = "opacity 1.4s ease-in-out";
-//     haero.style.opacity = "0";
-//     toro.style.opacity = "0";
-// }
+function hideHaeroAndToroWithTransition() {
+    haero.style.transition = "opacity 1.4s ease-in-out";
+    toro.style.transition = "opacity 1.4s ease-in-out";
+    haero.style.opacity = "0";
+    toro.style.opacity = "0";
+}
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -109,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const map02 = document.querySelector('.map02');
     const map03 = document.querySelector('.map03');
     const map04 = document.querySelector('.map04');
-  const haero = document.querySelector('#haero');
+    const haero = document.querySelector('#haero');
     const toro = document.querySelector('#toro');
 
     hideAllMaps();
@@ -120,10 +118,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function handlePinClick(event) {
         // 모든 지도 요소 숨기기
         hideAllMaps();
-     
- // 기본적으로 haero와 toro를 보이게 설정
-        haero.style.opacity = "1";
-        toro.style.opacity = "1";
+
+         // 기본적으로 haero와 toro를 보이게 설정
+         haero.style.opacity = "1";
+         toro.style.opacity = "1";
 
         // 클릭된 핀에 따라 지도 요소 보이기
         const pinClass = event.currentTarget.classList[0];
@@ -131,32 +129,25 @@ document.addEventListener("DOMContentLoaded", function() {
             case "pin02":
                 map01.style.opacity = "1";
                 map01.style.transition = "opacity 1.4s ease-in-out";
-          haero.style.opacity = "1";
-                toro.style.opacity = "1";
                 break;
             case "pin03":
                 map02.style.opacity = "1";
                 map02.style.transition = "opacity 1.4s ease-in-out";
-          haero.style.opacity = "1";
-                toro.style.opacity = "1";
                 break;
             case "pin04":
                 map03.style.opacity = "1";
                 map03.style.transition = "opacity 1.4s ease-in-out";
-             
+                haero.style.opacity = "0";
+                toro.style.opacity = "0";
                 hideHaeroAndToroWithTransition();
                 break;
             case "pin05":
                 map04.style.opacity = "1";
                 map04.style.transition = "opacity 1.4s ease-in-out";
-          haero.style.opacity = "1";
-                toro.style.opacity = "1";
                 break;
             case "pin05":
                 map05.style.opacity = "1";
                 map05.style.transition = "opacity 1.4s ease-in-out";
-          haero.style.opacity = "1";
-                toro.style.opacity = "1";
                 break;
             case "pin06":
                 map06.style.opacity = "1";
@@ -166,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.error("Invalid pin class:", pinClass);
         }
     }
-
 
     // 초기 화면에서 모든 지도 요소 숨기기
     hideAllMaps();
