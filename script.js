@@ -66,6 +66,12 @@ const innerPin01 = document.querySelector('.inner-pin01');
 // 핀을 클릭할 때 실행할 함수
 function handlePinClick(event) {
     console.log('click');
+ 
+  // 기본적으로 haero와 toro를 보이게 설정
+        haero.style.opacity = "1";
+        toro.style.opacity = "1";
+
+ 
     // 모든 핀의 활성화 클래스를 제거합니다.
     document.querySelectorAll('.inner-pin01, .inner-pin02, .inner-pin03, .inner-pin04, .inner-pin05, .inner-pin06').forEach(pin => {
         pin.classList.remove('active');
