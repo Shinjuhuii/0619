@@ -107,6 +107,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const map02 = document.querySelector('.map02');
     const map03 = document.querySelector('.map03');
     const map04 = document.querySelector('.map04');
+  const haero = document.querySelector('#haero');
+    const toro = document.querySelector('#toro');
 
     hideAllMaps();
 
@@ -131,7 +133,8 @@ document.addEventListener("DOMContentLoaded", function() {
             case "pin04":
                 map03.style.opacity = "1";
                 map03.style.transition = "opacity 1.4s ease-in-out";
-            
+                haero.style.opacity = "0";
+                toro.style.opacity = "0";
                 hideHaeroAndToroWithTransition();
                 break;
             case "pin05":
