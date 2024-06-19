@@ -67,10 +67,6 @@ const innerPin01 = document.querySelector('.inner-pin01');
 function handlePinClick(event) {
     console.log('click');
  
-  // 기본적으로 haero와 toro를 보이게 설정
-        haero.style.opacity = "1";
-        toro.style.opacity = "1";
-
  
     // 모든 핀의 활성화 클래스를 제거합니다.
     document.querySelectorAll('.inner-pin01, .inner-pin02, .inner-pin03, .inner-pin04, .inner-pin05, .inner-pin06').forEach(pin => {
@@ -124,6 +120,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function handlePinClick(event) {
         // 모든 지도 요소 숨기기
         hideAllMaps();
+     
+ // 기본적으로 haero와 toro를 보이게 설정
+        haero.style.opacity = "1";
+        toro.style.opacity = "1";
 
         // 클릭된 핀에 따라 지도 요소 보이기
         const pinClass = event.currentTarget.classList[0];
