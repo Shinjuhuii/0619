@@ -1,34 +1,28 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
 
 @font-face {
-    font-family: 'GmarketSans';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: 300; /* Light weight */
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'GmarketSans';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 500; /* Medium weight */
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'GmarketSans';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: 700; /* Bold weight */
-    font-style: normal;
-  }
-  
-    
-    
-  @font-face {
-      font-family: 'Pretendard-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-      font-weight: 500;
-      font-style: normal;
-  }
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 600; /* Bold weight */
+  font-style: normal;
+}
+
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+
 
   body, html {
     margin: 0;
@@ -46,49 +40,134 @@
 
 
 
-  /* 헤더 */
+/* 헤더 */
 header {
-    width: 1400px;
-    height: 102px;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 1400px;
+  height: 102px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav li {
+  list-style: none;
+  position: relative;
+}
+
+.nav li a {
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  border: #000000 solid 1px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+    ul{
+      padding-left: 10px;
+      display: flex;
+      flex-wrap: wrap;
   }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 28px;
+  ul li{
+      list-style: none;
   }
-  
-  .nav li {
-    list-style: none;
+  ul li a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      display: block;
+      padding: 8px 15px;
+      position: relative;
   }
-  
-  .nav li a {
-    font-family: "Pretendard Variable";
-    font-weight: 500;
-    font-size: 18px;
-    color: #000000;
-    text-decoration: none;
-  }
-  
-  .login {
-    width: 70px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-family: "Pretendard Variable";
-    font-weight: 600;
-    font-size: 18px;
-    color: #000000;
-    border: #000000 solid 1px;
-    border-radius: 50px;
-    text-decoration: none;
-  }
+  ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #391FD8;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s;
+}
+.dropbtn {
+  color: #DCEAF7;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+ul li a:hover{
+  color: #391FD8;
+}
+ul li a:hover:after{
+  transform: scalex(1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1); /* 투명한 배경 */
+  border-radius: 2px; /* 가장자리 라운드 처리 */
+  backdrop-filter: blur(10px); /* 블러 효과 */
+  min-width: 160px;
+  z-index: 1;
+  top: 100%; /* 메뉴 아래로 정렬 */
+  margin-left: -45px;
+  margin-top: -10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+ul li a:before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(235, 133, 0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px; /* 패딩을 더 크게 설정하여 클릭 영역 확대 */
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* 까지 헤더 */
 
   .pin{
     display: flex;
