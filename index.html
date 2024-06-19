@@ -9,6 +9,7 @@
   <body>
 
 
+
 <!--dkssudgktpdy-->
 <!--????-->
     <div class="box box1">
@@ -17,15 +18,23 @@
             <img src="https://ifh.cc/g/gkzSjP.png">
         </a>
         <ul class="nav">
-          <li><a href="sub3.html">장소</a></li>
-          <li><a href="sub2.html">코스</a></li>
-          <li><a href="sub4.html">리뷰</a></li>
-          <li><a href="">예약</a></li>
-          <li><a href="">고객지원</a></li>
+            <li><a href="sub3.html">장소</a></li>
+            
+            <li class="dropdown">
+                <a href="sub2.html" class="dropbtn">코스</a>
+                <div class="dropdown-content">
+                    <a href="#">소래산 1</a>
+                    <a href="#">소래산 2</a>
+                </div>
+            </li>
+    
+            <li><a href="sub4.html">리뷰</a></li>
+            <li><a href="#">예약</a></li>
+            <li><a href="#">고객지원</a></li>
         </ul>
-        <a href="" class="login">로그인
-        </a>
+        <a href="#" class="login">로그인</a>
     </header>
+    
 
    
     <div class="box box44">
@@ -60,7 +69,7 @@
         <div class="first-parallel"></div>
       </div>
       <div class="container">
-        <div class="box box2">
+        <div class="box box2 box44">
           <img src="https://ifh.cc/g/HZ91Tf.png" alt="">
         </div>
         <div class="cover">
@@ -97,61 +106,6 @@
         </div>
         </div>
 
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-    const initialMap = document.getElementById('map-tracking');
-    const allMaps = document.querySelectorAll('.cos-map img');
-
-    // 초기에 모든 지도 이미지를 숨김
-    allMaps.forEach(map => {
-        map.style.display = 'none';
-    });
-
-    // 초기에는 id="map-tracking"인 이미지만 보이도록 설정
-    initialMap.style.display = 'block';
-
-    // 클릭된 버튼에 따라 지도 이미지 변경
-    const btns = document.querySelectorAll('.cos-btn a');
-    btns.forEach(btn => {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault(); // 기본 클릭 동작 방지
-
-            // 클릭된 버튼의 data-target 속성 값에 해당하는 지도 이미지만 보이기
-            const target = this.getAttribute('data-target');
-            const mapToShow = document.getElementById(`map-${target}-detail`);
-            if (mapToShow) {
-                // 모든 지도 이미지 숨기기
-                allMaps.forEach(map => {
-                    map.style.display = 'none';
-                });
-
-                mapToShow.style.display = 'block';
-
-                // 이벤트 버블링 방지
-                event.stopPropagation();
-            }
-        });
-    });
-
-    // 배경 클릭 시 기본 지도 이미지로 돌아가기
-    document.addEventListener('click', function(event) {
-        const clickedElement = event.target;
-
-        // div.cos-btn의 영역을 제외한 다른 곳을 클릭했을 때만 처리
-        if (!clickedElement.closest('.cos-btn')) {
-            // 모든 지도 이미지 숨기기
-            allMaps.forEach(map => {
-                map.style.display = 'none';
-            });
-
-            // 기본 지도 이미지 보이기
-            initialMap.style.display = 'block';
-        }
-    });
-});
-
-        </script>
-
 
         <div class="box box4">
         <img style="padding-top: 40px; width: 60%;" src="https://ifh.cc/g/yzQSYF.png" alt="">
@@ -165,54 +119,71 @@
 
         <div class="box box5">
           
-          <p class="title"><img src="https://ifh.cc/g/FtqF15.png" alt=""></p>
-          <p class="title2">시흥 속 다양한 장소를 선택하여 관련 투어를 신청하고 <br>
+          <div class="box box54">
+            <p class="title"><img src="https://ifh.cc/g/FtqF15.png" alt=""></p>
+          </div>
+            <p class="title2">시흥 속 다양한 장소를 선택하여 관련 투어를 신청하고 <br>
             다양한 이벤트와 관광을 동시에 즐겨보세요!</p>
+
+          
           <p class="title3">INTRODUCTION</p>
           <p class="title4">시흥 코스 맛보기</p>
 
 
 
-          <swiper-container class="mySwiper"  space-between="20px"
-          slides-per-view="auto">
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/oBmdVc.jpg" alt="Slide 1">
-              <p>관곡지</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/DXlBDQ.png" alt="Slide 2">
-              <p>소래산</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/cTYH7Y.png" alt="Slide 3">
-              <p>옥구공원</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/3g75WQ.png" alt="Slide 4">
-              <p>염전체험장</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/GSKNf1.png" alt="Slide 5">
-              <p>흔들 전망대</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="slide-content">
-              <img src="https://ifh.cc/g/4bdGXg.png" alt="Slide 6">
-              <p>오이도 박물관</p>
-            </div>
-          </swiper-slide>
+          <swiper-container class="mySwiper" space-between="20" slides-per-view="auto">
+            <swiper-slide>
+                <a href="sub8.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img src="https://ifh.cc/g/oBmdVc.jpg" alt="Slide 1">
+                        <p>관곡지</p>
+                    </div>
+                </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="sub2.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img src="https://ifh.cc/g/DXlBDQ.png" alt="Slide 2">
+                        <p>소래산</p>
+                    </div>
+                </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="sub7.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img style="width: 111%;" src="https://ifh.cc/g/DQx0YF.png" alt="Slide 3">
+                        <p>거북섬</p>
+                    </div>
+                </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="sub5.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img src="https://ifh.cc/g/3g75WQ.png" alt="Slide 4">
+                        <p>염전체험장</p>
+                    </div>
+                </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="sub5.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img src="https://ifh.cc/g/GSKNf1.png" alt="Slide 5">
+                        <p>흔들 전망대</p>
+                    </div>
+                </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a href="sub7.html" style="text-decoration: none;">
+                    <div class="slide-content">
+                        <img src="https://ifh.cc/g/4bdGXg.png" alt="Slide 6">
+                        <p>오이도 박물관</p>
+                    </div>
+                </a>
+            </swiper-slide>
         </swiper-container>
-      
+    
+    
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   
 
 
@@ -328,70 +299,147 @@
 
 
 
-// 첫 번째 스크롤 이벤트 핸들러: .box4 img 요소들에 적용
-window.addEventListener('scroll', revealBox4);
+        // 첫 번째 스크롤 이벤트 핸들러: .box4 img 요소들에 적용
+        window.addEventListener('scroll', revealBox4);
 
-function revealBox4() {
-    var reveals = document.querySelectorAll('.box4 img');
+        function revealBox4() {
+            var reveals = document.querySelectorAll('.box4 img');
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
 
-        if (revealTop < revealPoint) {
-            reveals[i].classList.add('active');
-        } else {
-            reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                if (revealTop < revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                }
+            }
         }
-    }
-}
 
-// 두 번째 스크롤 이벤트 핸들러: .box44 img 요소들에 적용
-window.addEventListener('scroll', revealBox44);
+        window.addEventListener('scroll', revealBox44);
+        document.addEventListener('DOMContentLoaded', revealBox44); // 페이지가 구동될 때 실행
 
-function revealBox44() {
-    var reveals = document.querySelectorAll('.box44 img');
+        function revealBox44() {
+            var reveals = document.querySelectorAll('.box44 img');
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
 
-        if (revealTop < revealPoint) {
-            reveals[i].classList.add('active');
-        } else {
-            reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                if (revealTop < revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                }
+            }
         }
-    }
-}
+        window.addEventListener('scroll', revealBox54);
+        document.addEventListener('DOMContentLoaded', revealBox54); // 페이지가 구동될 때 실행
 
-// 세 번째 스크롤 이벤트 핸들러: .box55 img 요소들에 적용
-window.addEventListener('scroll', revealBox55);
+        function revealBox54() {
+            var reveals = document.querySelectorAll('.box54 img');
 
-function revealBox55() {
-    var reveals = document.querySelectorAll('.box55 img');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
-
-        if (revealTop < revealPoint) {
-            reveals[i].classList.add('active');
-        } else {
-            reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                if (revealTop < revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                }
+            }
         }
-    }
-}
+
+        // 세 번째 스크롤 이벤트 핸들러: .box55 img 요소들에 적용
+        window.addEventListener('scroll', revealBox55);
+
+        function revealBox55() {
+            var reveals = document.querySelectorAll('.box55 img');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = windowHeight / 2; // 이미지가 화면의 50%에 도달할 때
+
+                if (revealTop < revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active'); // 이미지가 다시 화면 밖으로 나가면 초기화
+                }   
+            }
+        }
 
 
 
+      //시흥코스맛보기//
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            autoplay: {
+                delay: 3000, // 슬라이드가 자동으로 전환되는 시간 (밀리초 단위)
+                disableOnInteraction: false,
+            },
+            loop: true, // 슬라이드를 무한 루프
+        });
+        //트래킹//
 
+document.addEventListener('DOMContentLoaded', function() {
+    const initialMap = document.getElementById('map-tracking');
+    const allMaps = document.querySelectorAll('.cos-map img');
 
+    // 초기에 모든 지도 이미지를 숨김
+    allMaps.forEach(map => {
+        map.style.display = 'none';
+    });
 
-  
+    // 초기에는 id="map-tracking"인 이미지만 보이도록 설정
+    initialMap.style.display = 'block';
 
+    // 클릭된 버튼에 따라 지도 이미지 변경
+    const btns = document.querySelectorAll('.cos-btn a');
+    btns.forEach(btn => {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 클릭 동작 방지
+
+            // 클릭된 버튼의 data-target 속성 값에 해당하는 지도 이미지만 보이기
+            const target = this.getAttribute('data-target');
+            const mapToShow = document.getElementById(`map-${target}-detail`);
+            if (mapToShow) {
+                // 모든 지도 이미지 숨기기
+                allMaps.forEach(map => {
+                    map.style.display = 'none';
+                });
+
+                mapToShow.style.display = 'block';
+
+                // 이벤트 버블링 방지
+                event.stopPropagation();
+            }
+        });
+    });
+
+    // 배경 클릭 시 기본 지도 이미지로 돌아가기
+    document.addEventListener('click', function(event) {
+        const clickedElement = event.target;
+
+        // div.cos-btn의 영역을 제외한 다른 곳을 클릭했을 때만 처리
+        if (!clickedElement.closest('.cos-btn')) {
+            // 모든 지도 이미지 숨기기
+            allMaps.forEach(map => {
+                map.style.display = 'none';
+            });
+
+            // 기본 지도 이미지 보이기
+            initialMap.style.display = 'block';
+        }
+    });
+});
+        
 
     </script>
   </body>

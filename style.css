@@ -1,23 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
 @font-face {
   font-family: 'GmarketSans';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-  font-weight: 300, 500, 700; /* Light weight */
+  font-weight: 300; /* Light weight */
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Pretendard';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 100, 200, 300, 400, 500, 600;
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 500; /* Medium weight */
   font-style: normal;
 }
 
-*{
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 600; /* Bold weight */
+  font-style: normal;
 }
 
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'GmarketSans';
+}
 html,
 body {
   background-color: #ffffff;
@@ -27,8 +39,132 @@ body {
   padding: 0;
 }
 
-.container {
+/* 헤더 */
+header {
+  width: 1400px;
+  height: 102px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav li {
+  list-style: none;
+  position: relative;
+}
+
+.nav li a {
+  font-family: "Pretendard Variable";
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Pretendard Variable";
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  border: #000000 solid 1px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+    ul{
+      padding-left: 10px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul li{
+      list-style: none;
+  }
+  ul li a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      display: block;
+      padding: 8px 15px;
+      position: relative;
+  }
+  ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #391FD8;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s;
+}
+.dropbtn {
+  color: #DCEAF7;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+ul li a:hover{
+  color: #391FD8;
+}
+ul li a:hover:after{
+  transform: scalex(1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1); /* 투명한 배경 */
+  border-radius: 2px; /* 가장자리 라운드 처리 */
+  backdrop-filter: blur(10px); /* 블러 효과 */
+  min-width: 160px;
+  z-index: 1;
+  top: 100%; /* 메뉴 아래로 정렬 */
+  margin-left: -45px;
+  margin-top: -10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+ul li a:before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
   width: 100%;
+  height: 1px;
+  background-color: rgb(235, 133, 0);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px; /* 패딩을 더 크게 설정하여 클릭 영역 확대 */
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .box {
@@ -85,6 +221,7 @@ body {
       transform: translateY(0); /* 원래 위치로 */
   }
 }
+
 .x{
   height: auto; /* 비율 유지 */
   display: block; /* 인라인 요소의 여백 제거 */
@@ -97,16 +234,59 @@ body {
 
 
 
+.box54 {
+  height: 216px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box54 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box54 img {
+  width: 34%;
+  max-width: 100%; /* 이미지가 박스 내에서 최대 너비를 유지하도록 설정 */
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 40%; /* 상위 요소의 50%에서부터 위치 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box54 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+
+
+
 
 .box2 {
   background-color: rgb(255, 255, 255);
-  height: 460px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  height: 490px;
 }
 .box2 img{
-  width: 800px;
+  width: 840px;
+  padding-top: 130px;
 }
 
 .box2 p span{
@@ -162,9 +342,7 @@ body {
   align-items: center; /* 수직 정렬 */
 }
 
-.box3 img {
-  margin-right:160px; /* 동일한 왼쪽 여백 */
-}
+
 
 .info3 span {
   color: red; /* 원하는 색상으로 변경 */
@@ -210,9 +388,8 @@ body {
 
 .box3 {
   background-color: #DCEAF7;
-  height: 940px;
+  height: 920px;
 }
-
 .course {
   display: flex;
   flex-direction: column;
@@ -285,6 +462,11 @@ body {
 .cos-map img {
   width: 80%;
 }
+
+
+
+
+
 
 
 
@@ -480,49 +662,6 @@ padding: 0;
   white-space: nowrap;
 }
 
-/* 헤더 */
-header {
-  width: 1400px;
-  height: 102px;
-  margin: auto;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 28px;
-}
-
-.nav li {
-  list-style: none;
-}
-
-.nav li a {
-  font-family: "Pretendard Variable";
-  font-weight: 500;
-  font-size: 18px;
-  color: #000000;
-  text-decoration: none;
-}
-
-.login {
-  width: 70px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  font-family: "Pretendard Variable";
-  font-weight: 600;
-  font-size: 18px;
-  color: #000000;
-  border: #000000 solid 1px;
-  border-radius: 50px;
-  text-decoration: none;
-}
 
 
 /* 사진 */
@@ -547,6 +686,7 @@ header {
   color: #ffffff;
   text-align: center;
   line-height: 1.3;
+  padding: 20px;
 }
 .title3{
   font-family: 'Pretendard';
@@ -574,7 +714,6 @@ header {
   max-width: 100%;
   max-height: 100%;
 }
-
 
 
 swiper-container {
@@ -623,12 +762,6 @@ swiper-slide {
 }
 
 
-
-
-
-
-
-
 .slider-container {
   position: relative;
   width: 100%; /* 화면 전체 너비 */
@@ -661,6 +794,29 @@ swiper-slide {
   }
 }
 
+
+
+
+
+
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.swiper-slide img {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 100px;
+}
 
 
 .updo img{
@@ -719,4 +875,89 @@ swiper-slide {
       opacity: 1;
       transform: translateY(0); /* 원래 위치로 */
   }
+}
+
+
+
+
+/* 트래킹ㅋ스 */
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1100px;
+    height: 670px;
+    margin: 0 auto;
+}
+
+.cos-text {
+    text-align: left; /* 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 차지 */
+    margin-left: -210px; /* 약간의 좌측 여백 추가 */
+}
+
+.cos-text h1 {
+    font-family: 'GmarketSans';
+    padding-top: 90px;
+    font-size: 50px;
+    color: #6E6E6E;
+    font-weight: 500;
+}
+.cos-text span {
+  font-family: 'GmarketSans';
+  color: #391FD8; /* 예시로 동일한 색상을 적용 */
+  font-weight: 500;
+}
+
+
+.cos-text p {
+    font-size: 20px;
+    font-family: "Pretendard Variable";
+    margin-top: 10px;
+}
+
+.course-pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 120%;
+    gap: 155px; /* 사이 간격 설정 */
+}
+
+.cos-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    position: relative; /* 포지션 설정 */
+}
+
+.cos-btn a {
+    display: block;
+}
+
+.cos-btn img {
+    width: 95%;
+    height: auto; /* 이미지의 원래 높이 유지 */
+    margin-top: -10px;
+    border-radius: 10px; /* 둥근 모서리 추가 */
+    transition: outline 0.3s ease, border-radius 0.3s ease, z-index 0.3s ease; /* 부드러운 전환을 위해 추가 */
+    position: relative; /* 포지션 설정 */
+    z-index: 1; /* 기본 z-index 설정 */
+}
+
+.cos-btn img:hover {
+    outline: 4px solid #391FD8; /* 호버 효과: 테두리에 2px 아웃라인 추가 */
+    border-radius: 20px; /* 호버 시 둥근 모서리 변경 */
+    z-index: 10; /* 호버 시 z-index 증가 */
+}
+
+.cos-map {
+    display: flex;
+    justify-content: center;
+}
+
+.cos-map img {
+    width: 180%;
 }
