@@ -85,6 +85,7 @@ body {
       transform: translateY(0); /* 원래 위치로 */
   }
 }
+
 .x{
   height: auto; /* 비율 유지 */
   display: block; /* 인라인 요소의 여백 제거 */
@@ -97,16 +98,60 @@ body {
 
 
 
+.box54 {
+  height: 216px;
+  position: relative; /* 부모 요소를 상대적 위치로 설정 */
+}
+
+.box54 p {
+  text-align: center;
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어지도록 설정 (조정 가능) */
+  left: 0;
+  right: 0;
+}
+
+.box54 img {
+  
+  width: 34%;
+  max-width: 100%; /* 이미지가 박스 내에서 최대 너비를 유지하도록 설정 */
+  height: auto; /* 이미지의 비율 유지 */
+  display: block; /* 이미지를 블록 요소로 설정하여 가운데 정렬 가능 */
+  margin: auto; /* 이미지를 가운데 정렬 */
+  opacity: 0; /* 처음에는 투명하게 설정 */
+  transition: opacity 2s ease, transform 2s ease; /* 2초로 변경 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 40%; /* 상위 요소의 50%에서부터 위치 */
+  left: 50%; /* 왼쪽에서 50%에서부터 위치 */
+  transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+}
+
+.box54 img.active {
+  opacity: 1; /* 나타날 때 불투명하게 */
+  transform: translate(-50%, -50%); /* 원래 위치로 */
+}
+
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 아래서 위로 약간 이동 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* 원래 위치로 */
+  }
+}
+
+
+
 
 .box2 {
   background-color: rgb(255, 255, 255);
-  height: 460px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  height: 490px;
 }
 .box2 img{
-  width: 800px;
+  width: 840px;
+  padding-top: 130px;
 }
 
 .box2 p span{
@@ -212,79 +257,6 @@ body {
   background-color: #DCEAF7;
   height: 940px;
 }
-
-.course {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1100px;
-  height: 670px;
-  margin: 0 auto;
-}
-
-.cos-text {
-  text-align: left; /* 왼쪽 정렬 */
-  width: 100%; /* 전체 너비 차지 */
-  margin-left: 20px; /* 약간의 좌측 여백 추가 */
-}
-
-.cos-text h1 {
-  font-size: 45px;
-  color: #6E6E6E;
-}
-
-.cos-text p {
-  font-size: 20px;
-  font-family: "Pretendard Variable";
-  margin-top: 50px;
-}
-
-.course-pic {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 25px; /* 사이 간격 설정 */
-}
-
-.cos-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  position: relative; /* 포지션 설정 */
-}
-
-.cos-btn a {
-  display: block;
-}
-
-.cos-btn img {
-  width: 100%;
-  height: auto; /* 이미지의 원래 높이 유지 */
-  margin-top: -10px;
-  border-radius: 10px; /* 둥근 모서리 추가 */
-  transition: outline 0.3s ease, border-radius 0.3s ease, z-index 0.3s ease; /* 부드러운 전환을 위해 추가 */
-  position: relative; /* 포지션 설정 */
-  z-index: 1; /* 기본 z-index 설정 */
-}
-
-.cos-btn img:hover {
-  outline: 5px solid #391FD8; /* 호버 효과: 테두리에 2px 아웃라인 추가 */
-  border-radius: 20px; /* 호버 시 둥근 모서리 변경 */
-  z-index: 10; /* 호버 시 z-index 증가 */
-}
-
-.cos-map {
-  display: flex;
-  justify-content: center;
-}
-
-.cos-map img {
-  width: 80%;
-}
-
 
 
 
@@ -546,6 +518,7 @@ header {
   color: #ffffff;
   text-align: center;
   line-height: 1.3;
+  padding: 20px;
 }
 .title3{
   font-family: 'Pretendard';
@@ -594,39 +567,6 @@ swiper-slide {
   height: 400px; /* 세로 크기 */
 }
 
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide-content img {
-  display: block;
-  width: 95%;
-  height: 98%; /* 이미지 높이를 줄여서 텍스트 공간 확보 */
-  object-fit: cover;
-}
-
-.slide-content p {
-  font-family: 'Pretendard';
-  font-weight: 600;
-  margin: 0;
-  padding: 24px;
-  font-size: 27px;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
-  color: #ffffff;
-  
-}
-
-
-
-
-
-
-
 
 .slider-container {
   position: relative;
@@ -660,6 +600,28 @@ swiper-slide {
   }
 }
 
+
+
+
+
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.swiper-slide img {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 100px;
+}
 
 
 .updo img{
