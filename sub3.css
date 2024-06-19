@@ -168,7 +168,7 @@ ul li a:hover:after{
   z-index: 1;
   top: 100%; /* 메뉴 아래로 정렬 */
   margin-left: -45px;
-  margin-top: 0px;
+  margin-top: -12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 ul li a:before{
