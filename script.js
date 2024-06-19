@@ -131,10 +131,14 @@ document.addEventListener("DOMContentLoaded", function() {
             case "pin02":
                 map01.style.opacity = "1";
                 map01.style.transition = "opacity 1.4s ease-in-out";
+          haero.style.opacity = "1";
+                toro.style.opacity = "1";
                 break;
             case "pin03":
                 map02.style.opacity = "1";
                 map02.style.transition = "opacity 1.4s ease-in-out";
+          haero.style.opacity = "1";
+                toro.style.opacity = "1";
                 break;
             case "pin04":
                 map03.style.opacity = "1";
@@ -146,10 +150,14 @@ document.addEventListener("DOMContentLoaded", function() {
             case "pin05":
                 map04.style.opacity = "1";
                 map04.style.transition = "opacity 1.4s ease-in-out";
+          haero.style.opacity = "1";
+                toro.style.opacity = "1";
                 break;
             case "pin05":
                 map05.style.opacity = "1";
                 map05.style.transition = "opacity 1.4s ease-in-out";
+          haero.style.opacity = "1";
+                toro.style.opacity = "1";
                 break;
             case "pin06":
                 map06.style.opacity = "1";
