@@ -143,8 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
             case "pin04":
                 map03.style.opacity = "1";
                 map03.style.transition = "opacity 1.4s ease-in-out";
-                haero.style.opacity = "0";
-                toro.style.opacity = "0";
+             
                 hideHaeroAndToroWithTransition();
                 break;
             case "pin05":
