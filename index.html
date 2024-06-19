@@ -69,21 +69,88 @@
 
         
         <div class="box box3">
-          <p class="info3"> <span>시흥시</span>곳곳의 다양한 <br><span>트래킹 코스</span>를 돌아보세요</p>
-          <p class="info4">✔️시흥에서 알차게 준비한 시흥시티투어를 소개할게요.</p>
-          <script type="text/javascript">
-            function ChnImg(){
-              document.getElementById("imgId").src = "b.PNG";
-            }
-            </script>
-          <div class="jiji">
-            <div onclick="ChnImg()"><img style="margin-left: 190px; margin-top: 0px; width: 65%;" src="https://ifh.cc/g/N8792t.png"></div>
-            <img style="width: 42%;" id="imgId" src="https://ifh.cc/g/yKrC2v.png">
-          </div>
-
-  
-          
+          <div class="course">
+            <div class="cos-text">
+                <h1>
+                    <span style="color: #391FD8;">시흥시</span>곳곳의 다양한 <br>
+                    <span style="color: #391FD8;">트래킹 코스</span>를 돌아보세요
+                </h1>
+                <p>✔️시흥에서 알차게 준비한 시흥시티투어를 소개할게요.</p>
+            </div>
+        
+            <div class="course-pic">
+                <div class="cos-btn">
+                    <a href="#" data-target="tracking"><img src="img/트래킹.svg" alt=""></a>
+                    <a href="#" data-target="oido"><img src="img/오이도.svg" alt=""></a>
+                    <a href="#" data-target="gwanak"><img src="img/관곡지.svg" alt=""></a>
+                    <a href="#" data-target="custom"><img src="img/맞춤형.svg" alt=""></a>
+                </div>
+        
+                <div class="cos-map">
+                    <img src="img/클릭x.svg" alt="트래킹" id="map-tracking">
+                    <img src="img/트래킹 map.svg" alt="트래킹" id="map-tracking-detail">
+                    <img src="img/오이도 map.svg" alt="오이도" id="map-oido-detail">
+                    <img src="img/관곡지map.svg" alt="관곡지" id="map-gwanak-detail">
+                    <img src="img/맞춤형 map.svg" alt="맞춤형" id="map-custom-detail">
+                </div>
+            </div>
         </div>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    const initialMap = document.getElementById('map-tracking');
+    const allMaps = document.querySelectorAll('.cos-map img');
+
+    // 초기에 모든 지도 이미지를 숨김
+    allMaps.forEach(map => {
+        map.style.display = 'none';
+    });
+
+    // 초기에는 id="map-tracking"인 이미지만 보이도록 설정
+    initialMap.style.display = 'block';
+
+    // 클릭된 버튼에 따라 지도 이미지 변경
+    const btns = document.querySelectorAll('.cos-btn a');
+    btns.forEach(btn => {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 클릭 동작 방지
+
+            // 클릭된 버튼의 data-target 속성 값에 해당하는 지도 이미지만 보이기
+            const target = this.getAttribute('data-target');
+            const mapToShow = document.getElementById(`map-${target}-detail`);
+            if (mapToShow) {
+                // 모든 지도 이미지 숨기기
+                allMaps.forEach(map => {
+                    map.style.display = 'none';
+                });
+
+                mapToShow.style.display = 'block';
+
+                // 이벤트 버블링 방지
+                event.stopPropagation();
+            }
+        });
+    });
+
+    // 배경 클릭 시 기본 지도 이미지로 돌아가기
+    document.addEventListener('click', function(event) {
+        const clickedElement = event.target;
+
+        // div.cos-btn의 영역을 제외한 다른 곳을 클릭했을 때만 처리
+        if (!clickedElement.closest('.cos-btn')) {
+            // 모든 지도 이미지 숨기기
+            allMaps.forEach(map => {
+                map.style.display = 'none';
+            });
+
+            // 기본 지도 이미지 보이기
+            initialMap.style.display = 'block';
+        }
+    });
+});
+
+        </script>
 
 
         <div class="box box4">

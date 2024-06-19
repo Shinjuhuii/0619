@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300, 500, 700; /* Light weight */
+    font-style: normal;
+}
+
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'GmarketSans';
+    background-color: #DCEAF7;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1100px;
+    height: 670px;
+    margin: 0 auto;
+}
+
+.cos-text {
+    text-align: left; /* 왼쪽 정렬 */
+    width: 100%; /* 전체 너비 차지 */
+    margin-left: 20px; /* 약간의 좌측 여백 추가 */
+}
+
+.cos-text h1 {
+    font-size: 45px;
+    color: #6E6E6E;
+}
+
+.cos-text p {
+    font-size: 20px;
+    font-family: "Pretendard Variable";
+    margin-top: 50px;
+}
+
+.course-pic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 25px; /* 사이 간격 설정 */
+}
+
+.cos-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    position: relative; /* 포지션 설정 */
+}
+
+.cos-btn a {
+    display: block;
+}
+
+.cos-btn img {
+    width: 100%;
+    height: auto; /* 이미지의 원래 높이 유지 */
+    margin-top: -10px;
+    border-radius: 10px; /* 둥근 모서리 추가 */
+    transition: outline 0.3s ease, border-radius 0.3s ease, z-index 0.3s ease; /* 부드러운 전환을 위해 추가 */
+    position: relative; /* 포지션 설정 */
+    z-index: 1; /* 기본 z-index 설정 */
+}
+
+.cos-btn img:hover {
+    outline: 5px solid #391FD8; /* 호버 효과: 테두리에 2px 아웃라인 추가 */
+    border-radius: 20px; /* 호버 시 둥근 모서리 변경 */
+    z-index: 10; /* 호버 시 z-index 증가 */
+}
+
+.cos-map {
+    display: flex;
+    justify-content: center;
+}
+
+.cos-map img {
+    width: 80%;
+}
