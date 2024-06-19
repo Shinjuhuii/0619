@@ -95,12 +95,12 @@ function handlePinClick(event) {
 }
 
 // haero와 toro를 트랜지션 효과와 함께 숨기는 함수
-function hideHaeroAndToroWithTransition() {
-    haero.style.transition = "opacity 1.4s ease-in-out";
-    toro.style.transition = "opacity 1.4s ease-in-out";
-    haero.style.opacity = "0";
-    toro.style.opacity = "0";
-}
+// function hideHaeroAndToroWithTransition() {
+//     haero.style.transition = "opacity 1.4s ease-in-out";
+//     toro.style.transition = "opacity 1.4s ease-in-out";
+//     haero.style.opacity = "0";
+//     toro.style.opacity = "0";
+// }
 
 
 document.addEventListener("DOMContentLoaded", function() {
