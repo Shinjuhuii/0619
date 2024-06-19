@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'GmarketSans';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
@@ -22,7 +21,6 @@
 
 @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
-
 
   body, html {
     margin: 0;
