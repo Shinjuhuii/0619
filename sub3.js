@@ -10,8 +10,7 @@ const contents = [
     {
         title: "거북섬",
         subTitle: "정왕동",
-        description: `거북섬은 경기도 시흥시 시화 MTV(Multi Techno Valley)에
-        조성된 거북이 모양으로 생긴 인공섬`,
+        description: `MTV(Multi Techno Valley)에 조성된 거북이 모양으로 생긴 인공섬`,
         videoSource: "img/거북섬.mp4",
         link: "sub6.html" // 거북섬 링크
     },
