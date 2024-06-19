@@ -199,7 +199,7 @@ ul li a:before{
     color: white;
     position: relative;
     overflow: hidden; /* 부모 요소에 overflow 설정 */
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 .main-title {
