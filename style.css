@@ -163,10 +163,6 @@ ul li a:before{
   transition: background-color 0.3s;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1; /* 호버 시 배경색 변경 */
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
