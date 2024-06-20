@@ -204,6 +204,7 @@ ul li a:before{
   top: 40%; /* 상위 요소의 50%에서부터 위치 */
   left: 50%; /* 왼쪽에서 50%에서부터 위치 */
   transform: translate(-50%, -50%); /* 자기 자신의 50%만큼 왼쪽, 위로 이동 */
+  margin-top: 10px;
 }
 
 .box44 img.active {
