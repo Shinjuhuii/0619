@@ -4,7 +4,7 @@ const contents = [
         title: "갯골생태공원",
         subTitle: "장곡동",
         description: "경기도 유일의 내만갯골과 옛 염전의 정취를 느낄 수 있는 아름다운 곳",
-        videoSource: "img/갯골생태공원.mp4",
+        videoSource: "img/생태공원.mp4",
         link: "sub5.html" // 갯골생태공원 링크
     },
     {
