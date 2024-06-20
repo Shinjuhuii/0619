@@ -1189,11 +1189,12 @@ mark {
     height: 600px;
     padding-top: 180px;
     text-align: center;
-    background-image: url(https://blog.kakaocdn.net/dn/bPXGvX/btrdC85uSff/8sSkVehsb56B9KoZoFkGjK/img.gif);
+    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMTAyMjVfMTIg/MDAxNjE0MjI4NDA1NDIy.j-aU2X0ozRv3v0hHMtDrszS8i6WwJm-OrAvB2GRjB5sg.sZlUkKWXTVFirK-9K0QGpFvtv9zFuMGFulTIbXVGqncg.GIF.cheonrim/%EC%98%A4%EC%9D%B4%EB%8F%84_%EC%9D%BC%EB%AA%B0.gif?type=w800);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; /* 상대 위치 설정 */
 }
+
 
 .content-frame06::before {
     content: '';
